@@ -32,7 +32,9 @@ module.exports = {
     "no-array-mutation": function(context) {
 			return {
 				"Identifier": function(node) {
-					if (node.parent.type === "MemberExpression" && arrayMethodPattern.test(node.name)) {
+          if (node.parent.type === "MemberExpression"
+            && node.parent.parent.callee === node.parent
+            && arrayMethodPattern.test(node.name)) {
 						context.report(node, "No array mutation allowed.");
 					}
 				}
