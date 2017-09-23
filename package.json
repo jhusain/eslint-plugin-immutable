@@ -4,7 +4,7 @@
   "description": "ESLint plugin to disable all mutation in JavaScript.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node tests/index.js"
   },
   "repository": {
     "type": "git",
@@ -19,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/jhusain/eslint-plugin-immutable/issues"
   },
-  "homepage": "https://github.com/jhusain/eslint-plugin-immutable#readme"
+  "homepage": "https://github.com/jhusain/eslint-plugin-immutable#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^4.7.2"
+  }
 }
